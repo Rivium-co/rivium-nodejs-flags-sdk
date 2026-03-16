@@ -1,0 +1,14 @@
+{
+  "name": "rivium-flags-nodejs-example",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npx tsx index.ts"
+  },
+  "dependencies": {
+    "@rivium/flags-node": "file:.."
+  },
+  "devDependencies": {
+    "tsx": "^4.0.0"
+  }
+}
