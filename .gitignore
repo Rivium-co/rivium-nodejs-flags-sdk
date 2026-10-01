@@ -22,3 +22,6 @@ example/node_modules/
 .env
 .env.local
 .env*.local
+
+# Test build
+.test-build/

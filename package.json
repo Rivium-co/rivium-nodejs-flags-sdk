@@ -1,15 +1,26 @@
 {
   "name": "@rivium/flags-node",
-  "version": "0.1.0",
-  "description": "Rivium Feature Flags SDK for Node.js - Server-side feature flag management",
+  "version": "0.2.0",
+  "description": "Rivium Flags server SDK for Node.js - local flag evaluation with targeting rules, rollouts and variants",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
-  "files": ["dist"],
+  "files": [
+    "dist",
+    "README.md",
+    "CHANGELOG.md",
+    "LICENSE"
+  ],
   "scripts": {
-    "build": "tsc",
-    "prepublishOnly": "npm run build"
+    "build": "rm -rf dist && tsc",
+    "test": "rm -rf .test-build && tsc -p tsconfig.test.json && node --test \".test-build/test/*.test.js\"",
+    "prepublishOnly": "npm run build && npm test"
   },
-  "keywords": ["feature-flags", "rivium", "feature-toggle", "nodejs"],
+  "keywords": [
+    "feature-flags",
+    "rivium",
+    "feature-toggle",
+    "nodejs"
+  ],
   "author": "Rivium",
   "license": "MIT",
   "homepage": "https://rivium.co",
@@ -20,5 +31,8 @@
   "devDependencies": {
     "typescript": "^5.0.0",
     "@types/node": "^20.0.0"
+  },
+  "engines": {
+    "node": ">=18"
   }
 }
